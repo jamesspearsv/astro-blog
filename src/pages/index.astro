@@ -1,0 +1,26 @@
+---
+/* the props */
+import 'open-props/open-props.min.css';
+
+/* optional imports that use the props */
+import 'open-props/normalize.min.css';
+import 'open-props/buttons.min.css';
+import '../styles/main.css';
+
+import Nav from '../components/Nav.astro';
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+  </head>
+  <body>
+    <Nav />
+    <h1>Astro</h1>
+    <a href="/blog/introducing-myself">Intro blog</a>
+  </body>
+</html>

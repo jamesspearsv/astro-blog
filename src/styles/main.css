@@ -1,0 +1,182 @@
+:root {
+  /*
+    TODO: Simplify CSS properties
+  */
+  /* STATIC COLOR */
+  --clr-accent: var(--green-9);
+  --clr-light: var(--stone-1);
+
+  /* FONT PROPERTIES */
+  --font-sizing: 1rem;
+  --font-small: var(--font-size-0);
+  --font-medium: var(--font-size-4);
+  --font-large: var(--font-size-5);
+  --font-xl: var(--font-size-6);
+  --weight-normal: var(--font-weight-4);
+  --weight-bold: var(--font-weight-7);
+
+  /* SPACING PROPERTIES */
+  --spacing-xxs: var(--size-1);
+  --spacing-xs: var(--size-2);
+  --spacing-small: var(--size-3);
+  --spacing-medium: var(--size-4);
+  --spacing-large: var(--size-7);
+  --spacing-xl: var(--size-10);
+
+  /* CONTENT WIDTHS */
+  --content-width: var(--size-content-3);
+  --content-width-xs: var(--size-content-1);
+  --content-width-s: var(--size-content-2);
+  --sidebar-width: var(--size-13);
+
+  /* BORDER PROPERTIES */
+  --border-radius: var(--radius-2);
+  --border-size: var(--border-size-1);
+
+  /* MISC PROPERTIES */
+  --editor-controls-height: var(--spacing-xl);
+}
+
+/* LIGHT THEME */
+html[data-theme='light'] {
+  --clr-fg-1: var(--gray-10);
+  --clr-fg-2: var(--gray-8);
+  --clr-fg-3: var(--gray-6);
+  --clr-bg-1: var(--stone-1);
+  --clr-bg-2: var(--stone-3);
+  --clr-bg-3: var(--stone-5);
+  --clr-danger: var(--red-9);
+}
+
+/* DARK THEME */
+html[data-theme='dark'] {
+  --clr-fg-1: var(--stone-1);
+  --clr-fg-2: var(--stone-4);
+  --clr-fg-3: var(--stone-6);
+  --clr-bg-1: var(--gray-9);
+  --clr-bg-2: var(--gray-7);
+  --clr-bg-3: var(--gray-5);
+  --clr-danger: var(--red-6);
+}
+
+/* GLOBAL STYLES */
+body {
+  background-color: var(--clr-bg-1);
+  color: var(--clr-fg-1);
+  font-size: 18px;
+  font-weight: var(--weight-normal);
+  line-height: var(--font-lineheight-5);
+}
+
+h1 {
+  font-size: var(--font-size-5);
+}
+
+h2 {
+  font-size: var(--font-size-4);
+}
+
+h3 {
+  font-size: var(--font-size-3);
+}
+
+hr {
+  margin-block: var(--spacing-medium);
+}
+
+a {
+  color: var(--clr-fg-1);
+
+  &:hover {
+    color: var(--blue-6);
+    text-decoration: underline;
+  }
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+input:focus-visible,
+textarea:focus-visible,
+button:focus-visible {
+  outline: solid 1px var(--clr-fg-1);
+}
+
+/* CSS RESET */
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+body {
+  /* 3. Add accessible line-height */
+  line-height: 1.5;
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* 
+  10. Remove ul default padding
+ */
+ul {
+  padding: 0;
+}

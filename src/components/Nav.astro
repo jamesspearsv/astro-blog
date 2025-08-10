@@ -1,0 +1,38 @@
+<nav>
+  <ul>
+    <li><a href="/blog">Blog</a></li>
+    <li class="anchor"><a href="/">James Spears, V</a></li>
+    <li><a href="/about">About</a></li>
+  </ul>
+</nav>
+<style>
+  nav {
+    padding-inline: var(--spacing-large);
+    height: var(--spacing-xl);
+    background-color: rgb(from inherit r g b / 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    transition-property: height border-bottom;
+    transition-duration: 200ms;
+    transition-timing-function: ease-in-out;
+    border-bottom: transparent solid 0px;
+    height: 4rem;
+  }
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    align-items: center;
+    gap: var(--spacing-medium);
+  }
+
+  .anchor {
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+</style>
