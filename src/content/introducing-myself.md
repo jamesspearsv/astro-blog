@@ -1,5 +1,7 @@
 ---
-
+title: "Introducing Myself!"
+pubDate: "2025-04-01"
+tags: "first post, hello world!"
 ---
 # A Brief Introduction
 

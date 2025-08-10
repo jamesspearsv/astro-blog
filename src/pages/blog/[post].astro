@@ -1,0 +1,17 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+
+export function getStaticPaths() {
+  return [
+    { params: { post: 'clifford' } },
+    { params: { post: 'rover' } },
+    { params: { post: 'spot' } },
+  ];
+}
+
+const { post } = Astro.params;
+---
+
+<MainLayout>
+  <h1>{post}.astro</h1>
+</MainLayout>
