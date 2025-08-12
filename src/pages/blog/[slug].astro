@@ -1,0 +1,34 @@
+---
+import { getCollection } from 'astro:content';
+import MainLayout from '../../layouts/MainLayout.astro';
+import { render } from 'astro:content';
+
+// generate post paths from existing content
+export async function getStaticPaths() {
+  const entries = await getCollection('posts');
+  return entries.map((entry) => {
+    return {
+      params: { slug: entry.id },
+      props: { post: entry },
+    };
+  });
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+
+<MainLayout>
+  <h1>{post?.data.title}</h1>
+  <br />
+  <div class="content-container">
+    <Content />
+  </div>
+</MainLayout>
+<style>
+  .content-container {
+    width: var(--content-width);
+    margin: auto;
+    background-color: rebeccapurple;
+  }
+</style>
