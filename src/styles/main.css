@@ -37,6 +37,7 @@
   --editor-controls-height: var(--spacing-xl);
 }
 
+/* TODO: fix theming */
 /* LIGHT THEME */
 html[data-theme='light'] {
   --clr-fg-1: var(--gray-10);
