@@ -1,21 +1,10 @@
 ---
+import PostPreview from '../../components/PostPreview.astro';
 import MainLayout from '../../layouts/MainLayout.astro';
 import { getCollection } from 'astro:content';
 const posts = await getCollection('posts');
 ---
 
 <MainLayout>
-  {
-    posts.map((post) => {
-      return (
-        <div>
-          <a href={`/blog/${post.id}`}>
-            <h2>{post.data.title}</h2>
-          </a>
-          <p>{post.data.pubDate}</p>
-          <p>{post.id}</p>
-        </div>
-      );
-    })
-  }
+  {posts.map((post) => <PostPreview post={post} />)}
 </MainLayout>

@@ -1,10 +1,11 @@
 ---
 import { getCollection } from 'astro:content';
 import MainLayout from '../layouts/MainLayout.astro';
+import PostPreview from '../components/PostPreview.astro';
 
 const posts = (await getCollection('posts'))
   .sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime())
-  .slice(0, 5);
+  .slice(0, 3);
 
 // TODO: Extract into a post preview component
 ---
@@ -16,17 +17,16 @@ const posts = (await getCollection('posts'))
   </p>
   <hr />
   <h2>Recent Posts</h2>
-  <ul>
-    {
-      posts.map((post) => (
-        <li>
-          <div>
-            <a href={`/blog/${post.id}`}>{post.data.title}</a>
-            <p>{post.data.pubDate.toDateString()}</p>
-            <p>{post.data.excerpt}</p>
-          </div>
-        </li>
-      ))
-    }
-  </ul>
+  <section>
+    {posts.map((post) => <PostPreview post={post} />)}
+  </section>
+  <section>
+    <a href="/blog">All Posts</a>
+  </section>
 </MainLayout>
+<style>
+  section {
+    display: flex;
+    flex-direction: column;
+  }
+</style>
