@@ -1,7 +1,30 @@
 ---
+import { getCollection } from 'astro:content';
 import MainLayout from '../layouts/MainLayout.astro';
+
+const posts = (await getCollection('posts'))
+  .sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime())
+  .slice(0, 5);
 ---
 
 <MainLayout>
-  <h1>Astro</h1>
+  <p>
+    Hi! Here you'll find thoughts, opinions, and general musings from a public
+    librarian and hobbyist web developer!
+  </p>
+  <hr />
+  <h2>Recent Posts</h2>
+  <ul>
+    {
+      posts.map((post) => (
+        <li>
+          <div>
+            <a href={`/blog/${post.id}`}>{post.data.title}</a>
+            <p>{post.data.pubDate.toDateString()}</p>
+            <p>{post.data.excerpt}</p>
+          </div>
+        </li>
+      ))
+    }
+  </ul>
 </MainLayout>

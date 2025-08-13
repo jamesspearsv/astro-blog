@@ -1,6 +1,6 @@
 ---
 title: "Feel-Good Detective Vibes"
-pubDate: "2025-07-27"
+pubDate: "2025-05-27"
 excerpt: "A review of The World's Greatest Detective and Her Just Okay Assistant by Liza Tully"
 tags: ["book review"]
 ---
