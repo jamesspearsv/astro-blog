@@ -1,0 +1,35 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  post: CollectionEntry<'posts'>;
+}
+const { post } = Astro.props;
+---
+
+<article>
+  <a href={`/blog/${post.id}`} class="link">
+    <h2 class="title">
+      {post.data.title}
+    </h2>
+  </a>
+  <p>{post.data.excerpt}</p>
+  <p class="pubDate">{new Date(post.data.pubDate).toDateString()}</p>
+</article>
+<style>
+  article {
+    margin-block: var(--spacing-small);
+  }
+
+  .link {
+    text-decoration: none;
+  }
+
+  .link:hover {
+    color: var(--clr-light);
+  }
+
+  .link:hover .title {
+    color: var(--clr-accent);
+  }
+</style>
