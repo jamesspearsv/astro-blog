@@ -1,6 +1,7 @@
 ---
 title: "Introducing Myself!"
 pubDate: "2025-04-01"
+excerpt: "Hi! I'm a public librarian and hobbyist web developer from West Virginia."
 tags: ["first post", "about me"]
 ---
 # A Brief Introduction

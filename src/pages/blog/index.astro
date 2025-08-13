@@ -5,7 +5,6 @@ const posts = await getCollection('posts');
 ---
 
 <MainLayout>
-  <h1>blog.astro</h1>
   {
     posts.map((post) => {
       return (

@@ -7,7 +7,7 @@
   * {
     line-height: 1.75;
   }
-
+  
   h1,
   h2,
   h3,
@@ -16,8 +16,9 @@
   h6 {
     margin-block: var(--spacing-small);
   }
-
+  
   p {
+    text-align: justify;
     margin-bottom: var(--spacing-small);
   }
 
