@@ -5,6 +5,8 @@ import MainLayout from '../layouts/MainLayout.astro';
 const posts = (await getCollection('posts'))
   .sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime())
   .slice(0, 5);
+
+// TODO: Extract into a post preview component
 ---
 
 <MainLayout>
