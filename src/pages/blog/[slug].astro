@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import MainLayout from '../../layouts/MainLayout.astro';
 import PostContent from '../../components/PostContent.astro';
+import Icon from '../../components/Icon.astro';
 
 // generate paths from existing content entries
 export async function getStaticPaths() {
@@ -18,7 +19,10 @@ const { post } = Astro.props;
 ---
 
 <MainLayout>
-  <a href="/blog">All Posts</a>
+  <a href="/blog" class="back-link">
+    <span><Icon icon={'arrow-left'} /></span>
+    <span> All Posts </span>
+  </a>
   <section class="front-matter">
     <h1>{post.data.title}</h1>
     <p class="date">{post.data.pubDate.toUTCString()}</p>
@@ -34,6 +38,13 @@ const { post } = Astro.props;
     display: flex;
     flex-direction: column;
     position: relative;
+  }
+
+  .back-link {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    width: fit-content;
   }
 
   .date {
