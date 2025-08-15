@@ -1,7 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import MainLayout from '../../layouts/MainLayout.astro';
-import Post from '../../components/Post.astro';
+import PostContent from '../../components/PostContent.astro';
 
 // generate paths from existing content entries
 export async function getStaticPaths() {
@@ -18,12 +18,37 @@ const { post } = Astro.props;
 ---
 
 <MainLayout>
-  <Post post={post} />
+  <a href="/blog">All Posts</a>
+  <section class="front-matter">
+    <h1>{post.data.title}</h1>
+    <p class="date">{post.data.pubDate.toUTCString()}</p>
+    <div class="tag-container">
+      {post.data.tags.map((tag) => <p class="tag">{tag}</p>)}
+    </div>
+    <hr />
+  </section>
+  <PostContent post={post} />
 </MainLayout>
 <style>
-  .content-container {
-    width: var(--content-width);
-    margin: auto;
-    background-color: rebeccapurple;
+  .front-matter {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .date {
+    font-size: 0.9375rem;
+  }
+
+  .tag-container {
+    display: flex;
+    gap: 0.25rem;
+  }
+
+  .tag {
+    font-size: 0.75rem;
+    background-color: var(--clr-accent);
+    border-radius: var(--border-radius);
+    padding: 0.25rem;
   }
 </style>

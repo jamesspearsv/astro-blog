@@ -16,7 +16,7 @@ const posts = (await getCollection('posts'))
     librarian and hobbyist web developer!
   </p>
   <hr />
-  <h2>Recent Posts</h2>
+  <p class="recent-posts-heading">Recent Posts</p>
   <section>
     {posts.map((post) => <PostPreview post={post} />)}
   </section>
@@ -28,5 +28,9 @@ const posts = (await getCollection('posts'))
   section {
     display: flex;
     flex-direction: column;
+  }
+
+  .recent-posts-heading {
+    font-size: 1.373rem;
   }
 </style>
