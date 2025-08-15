@@ -70,7 +70,7 @@ body {
 }
 
 main {
-  width: var(--content-width);
+  width: min(var(--content-width), 90%);
   margin: auto;
   padding-bottom: var(--spacing-large);
 }
