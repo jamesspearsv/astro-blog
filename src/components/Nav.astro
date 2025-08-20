@@ -1,20 +1,19 @@
 <nav>
   <ul>
-    <li class="anchor"><a href="/">James Spears, V</a></li>
+    <a href="/blog">Blog</a>
+  </ul>
+  <a href="/">
+    <span class="anchor"> James Spears, V</span>
+  </a>
+  <ul>
+    <a href="#">About</a>
   </ul>
 </nav>
 
 <style>
   nav {
-    padding-inline: var(--spacing-large);
-    height: var(--spacing-xl);
-    display: flex;
+    padding-inline: 1rem;
     justify-content: center;
-    align-items: center;
-
-    /* position: sticky;
-    top: 0;
-    z-index: -1000; */
   }
 
   ul {
@@ -26,7 +25,12 @@
   }
 
   .anchor {
+    color: inherit;
     font-weight: bold;
     font-size: 1.5rem;
+  }
+
+  a:has(span):hover {
+    color: inherit;
   }
 </style>

@@ -1,0 +1,9 @@
+:root {
+  --content-width: min(60ch, 90%);
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color: var(--clr-main-100);
+  }
+}

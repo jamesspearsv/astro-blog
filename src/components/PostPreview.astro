@@ -8,28 +8,45 @@ const { post } = Astro.props;
 ---
 
 <article>
-  <a href={`/blog/${post.id}`} class="link">
-    <h2 class="title">
-      {post.data.title}
-    </h2>
+  <a href={`/blog/${post.id}`}>
+    <span class="title"> {post.data.title}</span>
   </a>
-  <p>{post.data.excerpt}</p>
+  <p class="excerpt">{post.data.excerpt}</p>
   <p class="pubDate">{new Date(post.data.pubDate).toDateString()}</p>
 </article>
 <style>
   article {
-    margin-block: var(--spacing-small);
+    margin-block: 0.25rem;
   }
 
-  .link {
+  aside {
+    align-items: flex-start;
+  }
+
+  a {
+    font-size: 1.37rem;
+    color: inherit;
     text-decoration: none;
   }
 
-  .link:hover {
-    color: var(--clr-light);
+  a:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--clr-accent-500);
   }
 
-  .link:hover .title {
-    color: var(--clr-accent);
+  .excerpt,
+  .pubDate {
+    color: var(--clr-main-600);
+  }
+
+  .pubDate {
+    font-size: 0.85rem;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .excerpt,
+    .pubDate {
+      color: var(--clr-main-500);
+    }
   }
 </style>

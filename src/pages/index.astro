@@ -2,35 +2,59 @@
 import { getCollection } from 'astro:content';
 import MainLayout from '../layouts/MainLayout.astro';
 import PostPreview from '../components/PostPreview.astro';
+import Icon from '../components/Icon.astro';
 
 const posts = (await getCollection('posts'))
   .sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime())
-  .slice(0, 3);
-
-// TODO: Extract into a post preview component
+  .slice(0, 1);
 ---
 
 <MainLayout>
-  <p>
-    Hi! Here you'll find thoughts, opinions, and general musings from a public
-    librarian and hobbyist web developer!
-  </p>
   <hr />
-  <p class="recent-posts-heading">Recent Posts</p>
+  <section class="landing">
+    <aside>
+      <p class="greeting">Hey there!</p>
+      <p>
+        I'm James! Here you'll find thoughts, opinions, and general musings from
+        a public librarian and hobbyist web developer!
+      </p>
+    </aside>
+  </section>
+  <hr />
   <section>
-    {posts.map((post) => <PostPreview post={post} />)}
+    <p class="recent-posts-heading">Latest Post</p>
+    <aside>
+      {posts.map((post) => <PostPreview post={post} />)}
+    </aside>
   </section>
   <section>
-    <a href="/blog">All Posts</a>
-  </section>
-</MainLayout>
-<style>
-  section {
-    display: flex;
-    flex-direction: column;
-  }
+    <a href="/blog" class="see-more">
+      <span>See More</span>
+      <Icon icon={'arrow-right'} />
+    </a>
+    <style>
+      .landing {
+        margin-block: 1.375rem;
+      }
 
-  .recent-posts-heading {
-    font-size: 1.375rem;
-  }
-</style>
+      .greeting {
+        font-size: 1.5rem;
+        font-weight: bold;
+        font-style: italic;
+      }
+
+      .recent-posts-heading {
+        font-size: 1.375rem;
+      }
+
+      hr {
+        margin-block: 0.5rem;
+      }
+
+      .see-more {
+        display: flex;
+        align-items: center;
+      }
+    </style>
+  </section></MainLayout
+>

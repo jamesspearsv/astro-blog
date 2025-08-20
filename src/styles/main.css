@@ -1,112 +1,52 @@
-:root {
-  /*
-    TODO: Simplify CSS properties
-  */
-  /* STATIC COLOR */
-  --clr-accent: var(--green-9);
-  --clr-light: var(--stone-1);
-
-  /* FONT PROPERTIES */
-  --font-sizing: 1rem;
-  --font-small: var(--font-size-0);
-  --font-medium: var(--font-size-4);
-  --font-large: var(--font-size-5);
-  --font-xl: var(--font-size-6);
-  --weight-normal: var(--font-weight-4);
-  --weight-bold: var(--font-weight-7);
-
-  /* SPACING PROPERTIES */
-  --spacing-xxs: var(--size-1);
-  --spacing-xs: var(--size-2);
-  --spacing-small: var(--size-3);
-  --spacing-medium: var(--size-4);
-  --spacing-large: var(--size-7);
-  --spacing-xl: var(--size-10);
-
-  /* CONTENT WIDTHS */
-  --content-width: var(--size-content-3);
-  --content-width-xs: var(--size-content-1);
-  --content-width-s: var(--size-content-2);
-  --sidebar-width: var(--size-13);
-
-  /* BORDER PROPERTIES */
-  --border-radius: var(--radius-2);
-  --border-size: var(--border-size-1);
-
-  /* MISC PROPERTIES */
-  --editor-controls-height: var(--spacing-xl);
-}
-
-/* TODO: fix theming */
-/* LIGHT THEME */
-html[data-theme='light'] {
-  --clr-fg-1: var(--gray-10);
-  --clr-fg-2: var(--gray-8);
-  --clr-fg-3: var(--gray-6);
-  --clr-bg-1: var(--stone-1);
-  --clr-bg-2: var(--stone-3);
-  --clr-bg-3: var(--stone-5);
-  --clr-danger: var(--red-9);
-}
-
-/* DARK THEME */
-html[data-theme='dark'] {
-  --clr-fg-1: var(--stone-1);
-  --clr-fg-2: var(--stone-4);
-  --clr-fg-3: var(--stone-6);
-  --clr-bg-1: var(--gray-9);
-  --clr-bg-2: var(--gray-7);
-  --clr-bg-3: var(--gray-5);
-  --clr-danger: var(--red-6);
-}
+/* :root {
+/*   /*
+/*     TODO: Simplify CSS properties
+/*   /* STATIC COLOR */
+/*   --clr-accent: var(--green-9);
+/*   --clr-light: var(--stone-1);
+/* 
+/*   /* FONT PROPERTIES */
+/*   --font-sizing: 1rem;
+/*   --font-small: var(--font-size-0);
+/*   --font-medium: var(--font-size-4);
+/*   --font-large: var(--font-size-5);
+/*   --font-xl: var(--font-size-6);
+/*   --weight-normal: var(--font-weight-4);
+/*   --weight-bold: var(--font-weight-7);
+/* 
+/*   /* SPACING PROPERTIES */
+/*   --spacing-xxs: var(--size-1);
+/*   --spacing-xs: var(--size-2);
+/*   --spacing-small: var(--size-3);
+/*   --spacing-medium: var(--size-4);
+/*   --spacing-large: var(--size-7);
+/*   --spacing-xl: var(--size-10);
+/* 
+/*   /* CONTENT WIDTHS */
+/*   --content-width: var(--size-content-3);
+/*   --content-width-xs: var(--size-content-1);
+/*   --content-width-s: var(--size-content-2);
+/*   --sidebar-width: var(--size-13);
+/* 
+/*   /* BORDER PROPERTIES */
+/*   --border-radius: var(--radius-2);
+/*   --border-size: var(--border-size-1);
+/* 
+/*   /* MISC PROPERTIES */
+/*   --editor-controls-height: var(--spacing-xl);
+/* }
 
 /* GLOBAL STYLES */
-body {
-  background-color: var(--clr-bg-1);
-  color: var(--clr-fg-1);
-  font-size: 18px;
-  font-weight: var(--weight-normal);
-  line-height: var(--font-lineheight-5);
-}
-
-main {
-  width: min(var(--content-width), 90%);
-  margin: auto;
-  padding-bottom: var(--spacing-large);
-}
-
-h1 {
-  font-size: var(--font-size-5);
-}
-
-h2 {
-  font-size: var(--font-size-4);
-}
-
-h3 {
-  font-size: var(--font-size-3);
-}
-
-hr {
-  margin-block: var(--spacing-medium);
+:root {
+  --content-width: min(60ch, 90%);
 }
 
 a {
-  color: var(--clr-fg-1);
+  color: var(--clr-accent-600);
+}
 
-  &:hover {
-    color: var(--blue-6);
-    text-decoration: underline;
+@media (prefers-color-scheme: dark) {
+  a {
+    color: var(--clr-accent-400);
   }
-}
-
-button {
-  border: none;
-  cursor: pointer;
-}
-
-input:focus-visible,
-textarea:focus-visible,
-button:focus-visible {
-  outline: solid 1px var(--clr-fg-1);
 }
