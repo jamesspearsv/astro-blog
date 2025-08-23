@@ -1,6 +1,7 @@
 /* GLOBAL STYLES */
 :root {
   --content-width: min(60ch, 90%);
+  interpolate-size: allow-keywords;
 }
 
 html {

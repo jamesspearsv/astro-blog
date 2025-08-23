@@ -1,0 +1,64 @@
+<section class="hero-container">
+  <aside>
+    <div class="greeting">
+      <p>Hello!</p>
+      <p>I'm James!</p>
+    </div>
+    <p class="bio">
+      I'm a <span>public librarian</span> and <span>hobbyist web developer</span
+      > from West Virginia. Welcome to my corner of the Internet where I share my
+      thoughts, opinions, and other general musings!
+    </p>
+  </aside>
+</section>
+<style>
+  .hero-container {
+    height: 40dvh;
+    overflow-x: hidden;
+    align-content: center;
+  }
+
+  .greeting {
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-style: italic;
+    /* opacity: 1; */
+
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    /* transition: opacity margin-left;
+    transition-duration: 1000ms;
+    transition-timing-function: ease-in-out; */
+
+    /* @starting-style {
+      opacity: 0;
+      transform: translateX(100dvw);
+    } */
+  }
+
+  .greeting > *:nth-child(2) {
+    width: auto;
+    overflow-x: hidden;
+    text-wrap: nowrap;
+    transition: width 1500ms ease-out 250ms;
+
+    @starting-style {
+      width: 0;
+    }
+  }
+
+  .bio > span {
+    color: var(--clr-accent-600);
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: wavy;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .bio > span {
+      color: var(--clr-accent-400);
+    }
+  }
+</style>

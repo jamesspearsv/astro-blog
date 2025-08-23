@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import MainLayout from '../layouts/MainLayout.astro';
 import PostPreview from '../components/PostPreview.astro';
 import Icon from '../components/Icon.astro';
+import Hero from '../components/Hero.astro';
 
 const posts = (await getCollection('posts'))
   .sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime())
@@ -11,17 +12,7 @@ const posts = (await getCollection('posts'))
 
 <MainLayout>
   <hr />
-  <section class="hero">
-    <aside>
-      <p class="greeting">Hey there! I'm James!</p>
-      <p class="bio">
-        I'm a <span>public librarian</span> and <span
-          >hobbyist web developer</span
-        > from West Virginia. Welcome to my corner of the Internet where I share
-        my thoughts, opinions, and other general musings!
-      </p>
-    </aside>
-  </section>
+  <Hero />
   <hr />
   <section>
     <p class="recent-posts-heading">Latest Post</p>
@@ -35,42 +26,6 @@ const posts = (await getCollection('posts'))
       <Icon icon={'arrow-right'} />
     </a>
     <style>
-      .hero {
-        /* margin-block: 1.375rem; */
-        align-content: center;
-        height: 40dvh;
-        overflow-x: hidden;
-      }
-
-      .greeting {
-        font-size: 1.5rem;
-        font-weight: bold;
-        font-style: italic;
-        opacity: 1;
-
-        transition: opacity margin-left;
-        transition-duration: 1000ms;
-        transition-timing-function: ease-in-out;
-
-        @starting-style {
-          opacity: 0;
-          transform: translateX(100dvw);
-        }
-      }
-
-      .bio > span {
-        color: var(--clr-accent-600);
-        font-weight: bold;
-        font-style: italic;
-        text-decoration: wavy;
-      }
-
-      @media (prefers-color-scheme: dark) {
-        .bio > span {
-          color: var(--clr-accent-400);
-        }
-      }
-
       .recent-posts-heading {
         font-size: 1.375rem;
       }
