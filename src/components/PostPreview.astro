@@ -5,6 +5,8 @@ interface Props {
   post: CollectionEntry<'posts'>;
 }
 const { post } = Astro.props;
+const { pubDate } = post.data;
+pubDate.setUTCHours(16);
 ---
 
 <article>
@@ -12,7 +14,9 @@ const { post } = Astro.props;
     <span class="title"> {post.data.title}</span>
   </a>
   <p class="excerpt">{post.data.excerpt}</p>
-  <p class="pubDate">{new Date(post.data.pubDate).toDateString()}</p>
+  <p class="pubDate">
+    {pubDate.toDateString()}
+  </p>
 </article>
 <style>
   article {

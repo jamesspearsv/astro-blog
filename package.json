@@ -9,7 +9,7 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.13.2",
+    "astro": "^5.13.4",
     "feather-icons": "^4.29.2",
     "jump-css": "^0.4.1",
     "open-props": "^1.7.16"
