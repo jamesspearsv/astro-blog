@@ -25,19 +25,27 @@ const posts = (await getCollection('posts'))
       <span>See More</span>
       <Icon icon={'arrow-right'} />
     </a>
-    <style>
-      .recent-posts-heading {
-        font-size: 1.375rem;
-      }
+  </section>
+</MainLayout>
 
-      hr {
-        margin-block: 0.5rem;
-      }
+<style>
+  .recent-posts-heading {
+    color: var(--clr-accent-600);
+    font-weight: var(--weight-bold);
+  }
 
-      .see-more {
-        display: flex;
-        align-items: center;
-      }
-    </style>
-  </section></MainLayout
->
+  hr {
+    margin-block: 0.5rem;
+  }
+
+  .see-more {
+    display: flex;
+    align-items: center;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .recent-posts-heading {
+      color: var(--clr-accent-400);
+    }
+  }
+</style>
