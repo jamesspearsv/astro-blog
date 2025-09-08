@@ -53,6 +53,10 @@ pubDate.setUTCHours(16); // set pubDate time. 16:00 UTC == 12:00 GMT-4
     width: fit-content;
   }
 
+  .post-date {
+    color: var(--clr-main-600);
+  }
+
   .post-date,
   .post-tags {
     font-size: calc(1rem - 0.125rem);
@@ -80,6 +84,10 @@ pubDate.setUTCHours(16); // set pubDate time. 16:00 UTC == 12:00 GMT-4
   }
 
   @media (prefers-color-scheme: dark) {
+    .post-date {
+      color: var(--clr-main-500);
+    }
+
     .post-excerpt {
       color: var(--clr-main-500);
     }
