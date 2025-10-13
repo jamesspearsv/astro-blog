@@ -16,9 +16,9 @@ const posts = (await getCollection('posts'))
   <hr />
   <section>
     <p class="recent-posts-heading">Latest Post</p>
-    <aside>
+    <div>
       {posts.map((post) => <PostPreview post={post} />)}
-    </aside>
+    </div>
   </section>
   <section>
     <a href="/blog" class="see-more">

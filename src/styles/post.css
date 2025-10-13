@@ -59,14 +59,14 @@
   code,
   blockquote {
     padding: 5px;
-    padding-left: 10px;
-    background-color: var(--clr-main-800);
+    padding-left: var(--spacing-1);
+    background-color: var(--clr-main-200);
     border-radius: var(--border-radius);
     margin-block: var(--spacing-0);
 
     p,
     code {
-      font-size: 16px;
+      font-size: var(--spacing-1);
       text-wrap: wrap;
       margin: 0;
       padding: 0;
@@ -86,7 +86,7 @@
     left: 0;
     height: 100%;
     width: 5px;
-    background-color: var(--clr-main-600);
+    background-color: var(--clr-main-500);
     border-top-left-radius: var(--border-radius);
     border-bottom-left-radius: var(--border-radius);
   }
@@ -116,5 +116,13 @@
   td {
     padding: var(--spacing-xs);
     border: solid var(--border-size) var(--clr-bg-3);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .post-content {
+    blockquote {
+      background-color: var(--clr-main-800);
+    }
   }
 }

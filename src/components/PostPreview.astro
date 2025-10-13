@@ -9,7 +9,7 @@ const { pubDate } = post.data;
 pubDate.setUTCHours(16);
 ---
 
-<article>
+<section>
   <a href={`/blog/${post.id}`}>
     <span class="title"> {post.data.title}</span>
   </a>
@@ -17,14 +17,10 @@ pubDate.setUTCHours(16);
   <p class="pubDate">
     {pubDate.toDateString()}
   </p>
-</article>
+</section>
 <style>
-  article {
+  section {
     margin-block: 1.25rem;
-  }
-
-  aside {
-    align-items: flex-start;
   }
 
   a {
