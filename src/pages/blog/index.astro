@@ -1,14 +1,13 @@
 ---
+import BlogList from '../../components/BlogList.astro';
 import PostPreview from '../../components/PostPreview.astro';
 import MainLayout from '../../layouts/MainLayout.astro';
 import { getCollection } from 'astro:content';
-const posts = await getCollection('posts');
-posts.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
 ---
 
 <MainLayout>
   <p class="heading">All Posts</p>
-  {posts.map((post) => <PostPreview post={post} />)}
+  <BlogList />
 </MainLayout>
 <style>
   .heading {
