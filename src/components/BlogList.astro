@@ -1,11 +1,24 @@
 ---
-import { getCollection } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+import { ref } from 'vue';
 import PostPreview from './PostPreview.astro';
+import { undefined } from 'astro:schema';
 
-const posts = await getCollection('posts');
-posts.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
+interface Props {
+  posts: CollectionEntry<'posts'>[];
+}
+
+const tag = Astro.url.searchParams.get('tag');
+
+const { posts } = Astro.props;
 ---
 
-<section>
-  {posts.map((post) => <PostPreview post={post} />)}
-</section>
+<div>
+  <section>
+    {
+      posts.map((post) =>
+        post.data.tags.includes(tag!) ? <PostPreview post={post} /> : undefined
+      )
+    }
+  </section>
+</div>
