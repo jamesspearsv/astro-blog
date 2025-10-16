@@ -9,7 +9,7 @@ posts.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
 
 <MainLayout>
   <p class="heading">All Posts</p>
-  <BlogList client:load posts={posts} />
+  <BlogList posts={posts} />
 </MainLayout>
 <style>
   .heading {

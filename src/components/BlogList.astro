@@ -1,24 +1,36 @@
 ---
 import type { CollectionEntry } from 'astro:content';
-import { ref } from 'vue';
 import PostPreview from './PostPreview.astro';
-import { undefined } from 'astro:schema';
 
 interface Props {
   posts: CollectionEntry<'posts'>[];
 }
 
-const tag = Astro.url.searchParams.get('tag');
+const tag = Astro.url.searchParams.toString() || 'no tag...';
 
 const { posts } = Astro.props;
 ---
 
-<div>
+<div x-data="tag">
+  <p x-text="tag"></p>
   <section>
-    {
-      posts.map((post) =>
-        post.data.tags.includes(tag!) ? <PostPreview post={post} /> : undefined
-      )
-    }
+    {posts.map((post) => <PostPreview post={post} />)}
   </section>
 </div>
+
+<script>
+  import Alpine from 'alpinejs';
+
+  /*
+  Alpine.data -> https://alpinejs.dev/globals/alpine-data
+  Alpine lifecycle events -> https://alpinejs.dev/essentials/lifecycle#alpine-initialization
+  */
+
+  // Parse current search params during alpine:init
+  document.addEventListener('alpine:init', () => {
+    const url = new URL(location.href);
+    Alpine.data('tag', () => ({
+      tag: url.searchParams.get('tag') || '',
+    }));
+  });
+</script>
