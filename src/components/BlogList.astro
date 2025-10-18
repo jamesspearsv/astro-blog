@@ -6,21 +6,21 @@ interface Props {
   posts: CollectionEntry<'posts'>[];
 }
 
-const tag = Astro.url.searchParams.toString() || 'no tag...';
-
 const { posts } = Astro.props;
 ---
 
 <div x-data="tag">
-  <!-- <p x-text="tag"></p> -->
+  <p x-cloak x-show="tag">Category: <span x-text="tag"></span></p>
   <section>
     {
       posts.map((post) => (
-        <div x-data={`{tags: [${post.data.tags.map((t) => `"${t}"`)}]}`}>
-          <section x-show="!tag || tags.includes(tag)" x-cloak>
-            <PostPreview post={post} />
-          </section>
-        </div>
+        <section
+          x-data={`{tags: [${post.data.tags.map((t) => `"${t}"`)}]}`}
+          x-show="!tag || tags.includes(tag)"
+          x-cloak
+        >
+          <PostPreview post={post} />
+        </section>
       ))
     }
   </section>
