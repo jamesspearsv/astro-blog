@@ -1,0 +1,44 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import PostPreview from './PostPreview.astro';
+
+interface Props {
+  posts: CollectionEntry<'posts'>[];
+}
+
+const { posts } = Astro.props;
+---
+
+<div x-data="tag">
+  <p x-cloak x-show="tag">Category: <span x-text="tag"></span></p>
+  <section>
+    {
+      posts.map((post) => (
+        <section
+          x-data={`{tags: [${post.data.tags.map((t) => `"${t}"`)}]}`}
+          x-show="!tag || tags.includes(tag)"
+          x-cloak
+        >
+          <PostPreview post={post} />
+        </section>
+      ))
+    }
+  </section>
+</div>
+
+<script>
+  import Alpine from 'alpinejs';
+
+  /*
+  Alpine.data -> https://alpinejs.dev/globals/alpine-data
+  Alpine lifecycle events -> https://alpinejs.dev/essentials/lifecycle#alpine-initialization
+  */
+
+  // Parse current search params during alpine:init
+  document.addEventListener('alpine:init', () => {
+    const url = new URL(location.href);
+    Alpine.data('tag', () => ({
+      tag: url.searchParams.get('tag') || '',
+    }));
+  });
+</script>

@@ -9,10 +9,14 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/alpinejs": "^0.4.9",
+    "@astrojs/vue": "^5.1.1",
+    "@types/alpinejs": "^3.13.11",
+    "alpinejs": "^3.15.0",
     "astro": "^5.14.4",
     "feather-icons": "^4.29.2",
     "jump-css": "^0.5.0",
-    "open-props": "^1.7.16"
+    "vue": "^3.5.22"
   },
   "devDependencies": {
     "@types/feather-icons": "^4.29.4"

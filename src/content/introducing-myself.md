@@ -1,9 +1,10 @@
 ---
-title: "Introducing Myself!"
-pubDate: "2025-04-01"
+title: 'Introducing Myself!'
+pubDate: '2025-04-01'
 excerpt: "Hi! I'm a public librarian and hobbyist web developer from West Virginia."
-tags: ["first post", "about me"]
+tags: ['hello world!', 'about me']
 ---
+
 # A Brief Introduction
 
 Hi! My name is James and welcome to my personal blog! I'm a public librarian, hobbyist web developer, and cat lover from West Virginia. Thanks for checking out my blog and reading this post.
