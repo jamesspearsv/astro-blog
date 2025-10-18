@@ -11,3 +11,7 @@ html {
 main {
   padding: 1.25rem;
 }
+
+[x-cloak] {
+  display: none !important;
+}
