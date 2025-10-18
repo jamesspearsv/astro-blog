@@ -29,7 +29,7 @@ pubDate.setUTCHours(16); // set pubDate time. 16:00 UTC == 12:00 GMT-4
   <section class="front-matter">
     <p class="post-date">{post.data.pubDate.toDateString()}</p>
     <div class="post-tags">
-      {post.data.tags.map((tag) => <p class="post-tag">{tag}</p>)}
+      {post.data.tags.map((tag) => <a  href={`/blog?tag=${tag}`} "post-tag">{tag}</a>)}
     </div>
     <h1>{post.data.title}</h1>
     <p class="post-excerpt">{post.data.excerpt}</p>
