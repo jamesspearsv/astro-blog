@@ -1,7 +1,26 @@
 ---
-import MainLayout from '../../layouts/MainLayout.astro';
+import MainLayout from "../../layouts/MainLayout.astro";
 ---
 
 <MainLayout>
-  <h1>about.astro</h1>
+    <h1>About Me</h1>
+    <p>
+        I'm James! I'm a public librarian from West Virginia. I live with my
+        amazing wife and our two cats. Here I write and share my thoughts about
+        books, libraries, the world, and anything else that piques my interest.
+    </p>
+    <p class="disclaimer">
+        The views represented here are soley mine and do not represent the views
+        of any other individuals or organization.
+    </p>
 </MainLayout>
+<style>
+    p {
+        margin-top: 1rem;
+    }
+
+    .disclaimer {
+        font-style: italic;
+        text-align: center;
+    }
+</style>
