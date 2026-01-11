@@ -5,18 +5,19 @@ import { getCollection } from "astro:content";
 
 const posts = await getCollection("posts");
 
-const publishedPosts = posts.filter((post) => post.data.published);
+// Filter for only published posts
+const publishedPosts = posts.filter(
+    (post) => post.data.published && post.data.pubDate.getTime() > 0,
+);
 
-publishedPosts.sort((a, b) => {
-    console.log("a", a.data.pubDate.getTime());
-    console.log("b", b.data.pubDate.getTime());
-    return a.data.pubDate.getTime() - b.data.pubDate.getTime();
-});
+publishedPosts.sort(
+    (a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime(),
+);
 ---
 
 <MainLayout>
     <p class="heading">All Posts</p>
-    <BlogList posts={posts} />
+    <BlogList posts={publishedPosts} />
 </MainLayout>
 <style>
     .heading {

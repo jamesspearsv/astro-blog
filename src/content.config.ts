@@ -10,7 +10,7 @@ const posts = defineCollection({
   schema: z.object({
     published: z.boolean(),
     title: z.string(),
-    pubDate: z.date(),
+    pubDate: z.coerce.date(),
     tags: z.array(z.string()),
     excerpt: z.string(),
   }),
