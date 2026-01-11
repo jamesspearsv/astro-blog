@@ -2,21 +2,13 @@
 title: Ice In My Backyard
 pubDate:
 excerpt: My react to ICE activities in West Virginia
-tags:
-  - news
-  - opinion
-dateModified: 2026-01-11T14:18:59-05:00
+tags: [news, opinion]
+dateModified: 2026-01-11T14:35:26-05:00
 ---
-
-%%IMPORTANT
-
-Remember to give all posts a the filename format "blog-post-filename" Use the title property in the frontmatter to set the post's display title.
-
-%%
 
 Recently I've been very troubled, concerned, and worried by ICE activities locally and nationally. Here in North Central West Virginia ICE has raided local restaurants and detained people while at their work, stranded students at school after their parents were detained, and placed more than a few local businesses at risk. All the while not making a single person in West Virginia safer and sowing confusion and chaos. This local news also comes amid national news of ICE endangering and killing Americans in Minnesota and other places across the country. These actions are deeply unpopular but ICE is propped up by a president and group of allies who have somehow convinced themselves that they're making the lives of average Americans better.
 
-If it isn't clear already I think that the use of ICE to essentially harass, detain, and deport people in this way is wrong and unacceptable. It's true that many of the people detained are undocumented but otherwise have done nothing wrong and are in the country to improve their lives. 
+If it isn't clear already I think that the use of ICE to essentially harass, detain, and deport people in this way is wrong and unacceptable. It's true that many of the people detained are undocumented but otherwise have done nothing wrong and are in the country to improve their lives.
 
 ## The Land of Opportunity
 
