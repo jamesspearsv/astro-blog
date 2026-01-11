@@ -1,9 +1,10 @@
 ---
-title: 'Visiting Antietam'
-pubDate: '2025-08-26'
-excerpt: 'A reflective journey through Antietam National Battlefield—reliving history where it happened and discovering the enduring impact of the bloodiest day in American history'
-tags: ['history', 'travel']
-dateModified: 2026-01-11T14:21:53-05:00
+title: Visiting Antietam
+pubDate: 2025-08-26
+published: true
+dateModified: 2026-01-11T15:49:25-05:00
+excerpt: A reflective journey through Antietam National Battlefield—reliving history where it happened and discovering the enduring impact of the bloodiest day in American history
+tags: [history, travel]
 ---
 
 Earlier this month, my wife and I celebrated our first wedding anniversary by traveling to Jefferson County, West Virginia. Nearby, in Sharpsburg, Maryland, lies Antietam National Battlefield—a site I’ve wanted to visit since we moved to West Virginia five years ago. This trip was the perfect opportunity to finally experience a place of profound historical significance.

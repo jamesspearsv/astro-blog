@@ -1,10 +1,10 @@
 ---
 title: Mystery and Shadow Magic
 pubDate: 2025-05-01
+published: true
+dateModified: 2026-01-11T15:49:26-05:00
 excerpt: A review of Book of Night by Holly Black
-tags:
-  - book-review
-dateModified: 2026-01-11T14:21:49-05:00
+tags: [book-review]
 ---
 
 > An interesting paranormal fantasy novel with engaging mystery elements! Holly Black's Book of Night is a novel caught my attention and left me guessing until the very end.

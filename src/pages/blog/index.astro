@@ -1,18 +1,25 @@
 ---
-import BlogList from '../../components/BlogList.astro';
-import MainLayout from '../../layouts/MainLayout.astro';
-import { getCollection } from 'astro:content';
+import BlogList from "../../components/BlogList.astro";
+import MainLayout from "../../layouts/MainLayout.astro";
+import { getCollection } from "astro:content";
 
-const posts = await getCollection('posts');
-posts.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
+const posts = await getCollection("posts");
+
+const publishedPosts = posts.filter((post) => post.data.published);
+
+publishedPosts.sort((a, b) => {
+    console.log("a", a.data.pubDate.getTime());
+    console.log("b", b.data.pubDate.getTime());
+    return a.data.pubDate.getTime() - b.data.pubDate.getTime();
+});
 ---
 
 <MainLayout>
-  <p class="heading">All Posts</p>
-  <BlogList posts={posts} />
+    <p class="heading">All Posts</p>
+    <BlogList posts={posts} />
 </MainLayout>
 <style>
-  .heading {
-    font-size: 1.375rem;
-  }
+    .heading {
+        font-size: 1.375rem;
+    }
 </style>

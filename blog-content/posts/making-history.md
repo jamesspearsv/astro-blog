@@ -1,10 +1,10 @@
 ---
 title: Making History Won't Be Remembered
 pubDate: 2025-07-11
+published: true
+dateModified: 2026-01-11T15:49:27-05:00
 excerpt: A review of Making History by K.J. Parker
-tags:
-  - book-review
-dateModified: 2026-01-11T14:21:54-05:00
+tags: [book-review]
 ---
 
 I was provided a eARC copy of *Making History* by K.J. Parker thanks to Tor Publishing and NetGalley. I was very excited to start reading this short novel. The premise hinges on a group of scholars being forced by the usurping tyrant of their kingdom to make up an ancient civilization and history as a justification for a war the tyrant wants to wage on a neighboring kingdom. This seemed like the plot of a stellar story and novel. However, by the time I reached the last page of this story I felt let down and disappointed that a novel with such a strong potential could end up so underwhelming. Overall, I felt that *Making History* was a missed opportunity and story worth of a full length novel (or series even) that was at times boring, others confusing, and rushed. While I would not strongly recommend this novel if you are looking for something to blow you away. If you are looking for a short and just okay novel to fit into your reading schedule this would be an interesting one to look at.

@@ -1,9 +1,10 @@
 ---
-title: 'Introducing Myself!'
-pubDate: '2025-04-01'
-excerpt: "Hi! I'm a public librarian and hobbyist web developer from West Virginia."
-tags: ['hello world!', 'about me']
-dateModified: 2026-01-11T14:21:56-05:00
+title: Introducing Myself!
+pubDate: 2025-04-01
+published: true
+dateModified: 2026-01-11T15:57:59-05:00
+excerpt: Hi! I'm a public librarian and hobbyist web developer from West Virginia.
+tags: [about-me, hello-world]
 ---
 
 ## A Brief Introduction
@@ -16,9 +17,9 @@ Hi! My name is James and welcome to my personal blog! I'm a public librarian, ho
 
 ### Why Start a Blog in 2025?
 
-I decided to start a blog in 2025 for a few reasons. Like many, many other people all across the country, I am trying my best to hold to this chaotic roller-coster that we've all been stuck on for the past 6 months. The dizzying amount information from news, social media, and the general internet has left me feeling like I'm incapable of even just remember any of it let alone understanding or using any of it. This feeling left me wanting to find a way to better manage this _literal_ torrent of information.
+I decided to start a blog in 2025 for a few reasons. Like many, many other people all across the country, I am trying my best to hold to this chaotic roller-coster that we've all been stuck on for the past 6 months. The dizzying amount information from news, social media, and the general internet has left me feeling like I'm incapable of even just remember any of it let alone understanding or using any of it. This feeling left me wanting to find a way to better manage this *literal* torrent of information.
 
-I read (most of) _How To Build A Second Brain_ by Tiago Forte earlier this year. In the book, Forte lays out a solid system for managing, understanding, and using the huge amounts of information that we all have access to. At the center of this system is the C.O.D.E approach. This approach has four simple steps:
+I read (most of) *How To Build A Second Brain* by Tiago Forte earlier this year. In the book, Forte lays out a solid system for managing, understanding, and using the huge amounts of information that we all have access to. At the center of this system is the C.O.D.E approach. This approach has four simple steps:
 
 - Capture
 - Organize
@@ -29,7 +30,7 @@ Each step is designed to help manage and ultimately use the information availabl
 
 ### So What's This Blog Going to Be?
 
-Well... I don't have a clear idea yet and I haven't set a clear scope for what is _blog material_ and what isn't. At its most basic this blog will be a place to share my thoughts, opinions, and ideas on anything and everything that interests me. That's a lot of distance to cover so if I had to say what I think you'll find here it would include library news, web dev talk, and books!
+Well... I don't have a clear idea yet and I haven't set a clear scope for what is *blog material* and what isn't. At its most basic this blog will be a place to share my thoughts, opinions, and ideas on anything and everything that interests me. That's a lot of distance to cover so if I had to say what I think you'll find here it would include library news, web dev talk, and books!
 
 #### Library News
 

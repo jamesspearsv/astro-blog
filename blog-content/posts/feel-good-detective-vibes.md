@@ -1,10 +1,10 @@
 ---
 title: Feel-Good Detective Vibes
 pubDate: 2025-05-27
+published: true
+dateModified: 2026-01-11T15:49:34-05:00
 excerpt: A review of The World's Greatest Detective and Her Just Okay Assistant by Liza Tully
-tags:
-  - book-review
-dateModified: 2026-01-11T14:21:57-05:00
+tags: [book-review]
 ---
 
 Thanks to NetGalley and Berkeley Publishing Group I received an eARC copy of *The World's Greatest Detective and Her Just Okay Assistant* by Liza Tully! Detective mysteries are not my normal reading territory but I found myself enjoying the adventure of the world's greatest detective Audrey Merritt and her just okay Gen Z assistant Olivia Blunt way more than I expected I would. The adventure of Blunt and Merritt will be available starting July 8, 2025.

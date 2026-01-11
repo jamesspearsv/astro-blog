@@ -8,8 +8,9 @@ import { glob } from "astro/loaders";
 const posts = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "./blog-content/posts" }),
   schema: z.object({
+    published: z.boolean(),
     title: z.string(),
-    pubDate: z.coerce.date(),
+    pubDate: z.date(),
     tags: z.array(z.string()),
     excerpt: z.string(),
   }),

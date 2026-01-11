@@ -1,9 +1,10 @@
 ---
 title: Ice In My Backyard
 pubDate:
+published:
+dateModified: 2026-01-11T15:57:58-05:00
 excerpt: My react to ICE activities in West Virginia
 tags: [news, opinion]
-dateModified: 2026-01-11T14:35:26-05:00
 ---
 
 Recently I've been very troubled, concerned, and worried by ICE activities locally and nationally. Here in North Central West Virginia ICE has raided local restaurants and detained people while at their work, stranded students at school after their parents were detained, and placed more than a few local businesses at risk. All the while not making a single person in West Virginia safer and sowing confusion and chaos. This local news also comes amid national news of ICE endangering and killing Americans in Minnesota and other places across the country. These actions are deeply unpopular but ICE is propped up by a president and group of allies who have somehow convinced themselves that they're making the lives of average Americans better.
@@ -21,3 +22,5 @@ A rising tide lifts all boats. Everyone should know what this means. When someth
 ## Let's Talk About Hard Work
 
 ## Support Who You Can
+
+published:

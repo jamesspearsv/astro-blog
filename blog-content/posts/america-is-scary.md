@@ -1,9 +1,10 @@
 ---
-title: 'America Is Scary Right Now'
-pubDate: '2025-09-25'
-excerpt: 'Living through the aftermath of Charlie Kirk’s killing'
-tags: ['opinion', 'news']
-dateModified: 2026-01-11T14:21:58-05:00
+title: America Is Scary Right Now
+pubDate: 2025-09-25
+published: true
+dateModified: 2026-01-11T15:57:55-05:00
+excerpt: Living through the aftermath of Charlie Kirk’s killing
+tags: [opinion, news]
 ---
 
 America is undeniably frightening right now. Politically motivated violence seems to be on the rise. At a time when we desperately need responsible leadership to guide us away from hatred and violence, we find ourselves without it. Free speech faces genuine threats from government officials at the highest levels. All this unfolds against the backdrop of one of the most politically charged and socially divided periods in American history.
@@ -26,7 +27,7 @@ This rhetoric is irresponsible, divisive, and dangerous. Despite the obvious ris
 
 While our leaders' behavior is troubling enough, what's more frightening is how these attitudes filter down to ordinary people. The New York Times podcast [_The Daily_](https://www.npr.org/2025/09/22/nx-s1-5549407/charlie-kirk-memorial-republican-party-trump-revival-retribution) covered Kirk's memorial and interviewed attendees—regular people, some of whom traveled hundreds of miles to be there. What shocked me was their expressed desires. The "us versus them" mentality was unmistakable. One person stated, "I want to hear true leadership say that they will no longer tolerate this. Not with words, but with policies, with laws, no longer being tolerant to the left." This statement couldn't be clearer: tolerance is off the table. The fundamental idea that we can hold different beliefs while coexisting in this country is essential for civil society, yet a segment of the population has apparently abandoned this principle. The concern is obvious: how can we maintain a functioning society when we refuse to tolerate differences?
 
-On a deeper level, when tolerance disappears, political violence becomes more conceivable. I don't expect an army of conservatives to suddenly attack Democrats in cities. However, I worry that those already prone to violence will find it easier to justify their actions. Another memorial attendee told _The Daily_, "It really feels like they killed one of ours." If you're already open to political violence and believe a collective "they" is targeting you, it becomes easier to contemplate retaliating by "killing one of theirs."
+On a deeper level, when tolerance disappears, political violence becomes more conceivable. I don't expect an army of conservatives to suddenly attack Democrats in cities. However, I worry that those already prone to violence will find it easier to justify their actions. Another memorial attendee told *The Daily*, "It really feels like they killed one of ours." If you're already open to political violence and believe a collective "they" is targeting you, it becomes easier to contemplate retaliating by "killing one of theirs."
 
 ## Here's The Real Problem
 

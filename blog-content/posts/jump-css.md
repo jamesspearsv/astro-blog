@@ -1,9 +1,10 @@
 ---
-title: 'Jump.css'
-pubDate: '2025-07-16'
-excerpt: 'Sharing my minimal CSS framework'
-tags: ['web dev', 'hello world!']
-dateModified: 2026-01-11T14:21:55-05:00
+title: Jump.css
+pubDate: 2025-07-16
+published: true
+dateModified: 2026-01-11T15:58:00-05:00
+excerpt: Sharing my minimal CSS framework
+tags: [hello-world, web-dev]
 ---
 
 I recently published my first NPM package, Jump.css! Jump.css is a CSS framework that makes semantic HTML look good and helps jump start apps and websites. Jump.css is build on native CSS with the goal of being minimal, performant, customizable, and (most importantly) look good.
@@ -16,7 +17,7 @@ I started thinking about and building Jump.css for my own projects. I was tired 
 
 I was unhappy with existing class-less CSS frameworks that worked for 90% of what I wanted but fell short in that final 10%. I also dreaded the idea of learning a class-based framework like Tailwind or Bulma when I really wanted to focus on the side project I wanted to build.
 
-Given that problem I decided to _take write once and use everywhere approach_ by building my own CSS framework to fit my needs.
+Given that problem I decided to *take write once and use everywhere approach* by building my own CSS framework to fit my needs.
 
 ## Development Approach
 
