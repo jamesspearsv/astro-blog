@@ -3,6 +3,7 @@ title: 'America Is Scary Right Now'
 pubDate: '2025-09-25'
 excerpt: 'Living through the aftermath of Charlie Kirk’s killing'
 tags: ['opinion', 'news']
+dateModified: 2026-01-11T14:21:58-05:00
 ---
 
 America is undeniably frightening right now. Politically motivated violence seems to be on the rise. At a time when we desperately need responsible leadership to guide us away from hatred and violence, we find ourselves without it. Free speech faces genuine threats from government officials at the highest levels. All this unfolds against the backdrop of one of the most politically charged and socially divided periods in American history.

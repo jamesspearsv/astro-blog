@@ -1,8 +1,10 @@
 ---
-title: 'Katabasis by R. F. Kuang'
-pubDate: '2025-10-10'
-excerpt: 'Reviewing Katabasis by R. F. Kuang'
-tags: ['book review']
+title: Katabasis by R. F. Kuang
+pubDate: 2025-10-10
+excerpt: Reviewing Katabasis by R. F. Kuang
+tags:
+  - book-review
+dateModified: 2026-01-11T14:21:55-05:00
 ---
 
 I’m grateful to NetGalley, Avon, and Harper Voyage for providing an eARC of _Katabasis_ by R. F. Kuang, a book I eagerly anticipated! I was so excited to see this book available to review and was quick to snap it up. I quite literally devoured Kuang's other novels _Babel_ and _Yellowface_ and could not wait to dig into this one. From the start though I realized this wasn’t quite like Kuang’s other novels. It was unique and thoughtful just like I’d come to expect from this author but clear that this novel was something a little different. It took me much longer than I’d like to admit to finally finish the book but I don’t think that detracts from my enjoyment of it. Despite the slower pace, I found the book to be engaging and interesting. If you’ve read Kuang’s other novels, you’ll appreciate Katabasis, but be prepared for a uniquely measured pace.

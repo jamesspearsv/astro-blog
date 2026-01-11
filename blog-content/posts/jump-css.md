@@ -3,13 +3,14 @@ title: 'Jump.css'
 pubDate: '2025-07-16'
 excerpt: 'Sharing my minimal CSS framework'
 tags: ['web dev', 'hello world!']
+dateModified: 2026-01-11T14:21:55-05:00
 ---
 
 I recently published my first NPM package, Jump.css! Jump.css is a CSS framework that makes semantic HTML look good and helps jump start apps and websites. Jump.css is build on native CSS with the goal of being minimal, performant, customizable, and (most importantly) look good.
 
 > Check out Jump.css on [NPM](https://www.npmjs.com/package/jump-css) and [Github](https://github.com/jamesspearsv/jump-css)
 
-## Why build Jump.css?
+## Why Build Jump.css?
 
 I started thinking about and building Jump.css for my own projects. I was tired of having to write my own styles sheets for each project and each project having its own just slightly different but similar look.
 
