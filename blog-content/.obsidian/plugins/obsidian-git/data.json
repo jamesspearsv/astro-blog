@@ -1,5 +1,5 @@
 {
-  "commitMessage": "Content update: {{numFiles}} files on {{date}}",
+  "commitMessage": "Content update: {{date}}",
   "autoCommitMessage": "vault backup: {{date}}",
   "commitMessageScript": "",
   "commitDateFormat": "YYYY-MM-DD",

@@ -1,0 +1,25 @@
+views:
+  - type: table
+    name: All Posts
+    filters:
+      and:
+        - file.inFolder("posts")
+    groupBy:
+      property: published
+      direction: ASC
+    order:
+      - title
+      - file.mtime
+      - published
+      - pubDate
+      - file.basename
+      - tags
+    sort:
+      - property: pubDate
+        direction: DESC
+    columnSize:
+      note.title: 275
+      file.basename: 216
+    cardSize: 190
+    indentProperties: true
+    imageAspectRatio: 1
