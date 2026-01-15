@@ -1,8 +1,14 @@
 ---
 title: ICE Isn't Cool
+<<<<<<< HEAD
+pubDate:
+published:
+dateModified: 2026-01-11T16:10:22-05:00
+=======
 pubDate: 2026-01-13
 published: true
 dateModified: 2026-01-13T21:08:21-05:00
+>>>>>>> origin/main
 excerpt: My react to ICE activities in West Virginia
 tags:
   - news
@@ -23,6 +29,11 @@ A rising tide lifts all boats. Everyone should know what this means. When someth
 
 ## Let's Talk About Hard Work
 
+<<<<<<< HEAD
+## Support Who You Can
+
+published:
+=======
 I don't think that it's took absurd to say that hard work should be valued and rewarded in America. How many stories have we all hear about people "pulling themselves up by their bootstraps" and making something from nothing. Ignoring how it is quite literally impossible to pull yourself up by your bootstraps let's talk about hard work for a minute. There are plenty of natural born American citizens who spend their days working half as hard as the people they disrespectfully refer to as "illegals." I think it completely unacceptable to fault any immigrant for coming to America for a better life and working hard once they settle here. What difference does it make if they are documented or not? Seeking opportunity how ever you can is not a crime. Real criminals already face the full force of America's criminal justice system. Whether documented immigrant, undocumented, citizen otherwise. Why not let those immigrants who abide by the laws, work hard, and contribute to our economy do just that?
 
 ## Why Not Just Let 'Em Work?
@@ -54,3 +65,4 @@ Sadly the immigration crackdown does not appears to be stopping anytime soon. If
 [^1]: [We've Already Learned That Losing Immigrant Farm Workers Is A Disaster](https://www.huffpost.com/entry/alabama-immigration-law-farms_n_58c1d07fe4b0ed71826b55e0)
 
 [^2]: [# “It’s Just Not Right”: The Failures of Alabama’s Self-Deportation Experiment](https://www.motherjones.com/politics/2012/03/alabama-anti-immigration-law-self-deportation-movement/)
+>>>>>>> origin/main
