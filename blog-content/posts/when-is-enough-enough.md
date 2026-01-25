@@ -2,11 +2,9 @@
 title: When Is Enough, Enough?
 pubDate: 2026-01-24
 published: true
-dateModified: 2026-01-24T21:30:23-05:00
+dateModified: 2026-01-24T21:31:52-05:00
 excerpt: It's past time for ICE to leave Minneapolis
-tags:
-  - news
-  - opinion
+tags: [news, opinion]
 ---
 
 While most of the country is bracing for a winter storm this weekend, brave Americans in Minneapolis are facing off against authoritarianism and tyranny in the streets. Unfortunately they are paying a steep price for their stand. Many have been brutalized, detained, arrested, and terrorized by the federal government. And, this weekend another American in Minneapolis was murdered by the governments out of control agents.
@@ -27,9 +25,14 @@ Right now I feel horrified and sad about the state of the country and the way th
 
 ## Sources & More Reading
 
-- [“It’s a Horror Show”: Anguish Sweeps Minneapolis After Federal Agents Kill Another Neighbor – Mother...](https://www.motherjones.com/politics/2026/01/minneapolis-federal-agents-shooting-reactions-video/)
-- [Video Contradicts Trump Administration Account of Minneapolis Killing – Mother Jones](https://www.motherjones.com/politics/2026/01/video-contradicts-minneapolis-shooting-dhs-trump-alex-pretti/)
-- [Breaking: Federal Agents Shot and Killed a Man in Minneapolis This Morning – Mother Jones](https://www.motherjones.com/politics/2026/01/breaking-federal-agents-shot-killed-minneapolis-man/)
-- [Trump and Democrats harden their stances after Minneapolis shooting - POLITICO](https://www.politico.com/news/2026/01/24/minneapolis-shooting-ice-trump-democrats-00745630)
-- [Opinion \| There’s a Reason Trump Is Targeting Minneapolis - The New York Times](https://www.nytimes.com/2026/01/19/opinion/trump-minneapolis-ice.html)
-- [Pepper-Sprayed While Pinned Down: A Searing Scene Provokes Outrage - The New York Times](https://www.nytimes.com/2026/01/23/us/minneapolis-man-pepper-sprayed-pinned-video.html)
+[“It’s a Horror Show”: Anguish Sweeps Minneapolis After Federal Agents Kill Another Neighbor – Mother...](https://www.motherjones.com/politics/2026/01/minneapolis-federal-agents-shooting-reactions-video/)
+
+[Video Contradicts Trump Administration Account of Minneapolis Killing – Mother Jones](https://www.motherjones.com/politics/2026/01/video-contradicts-minneapolis-shooting-dhs-trump-alex-pretti/)
+
+[Breaking: Federal Agents Shot and Killed a Man in Minneapolis This Morning – Mother Jones](https://www.motherjones.com/politics/2026/01/breaking-federal-agents-shot-killed-minneapolis-man/)
+
+[Trump and Democrats harden their stances after Minneapolis shooting - POLITICO](https://www.politico.com/news/2026/01/24/minneapolis-shooting-ice-trump-democrats-00745630)
+
+[Opinion \| There’s a Reason Trump Is Targeting Minneapolis - The New York Times](https://www.nytimes.com/2026/01/19/opinion/trump-minneapolis-ice.html)
+
+[Pepper-Sprayed While Pinned Down: A Searing Scene Provokes Outrage - The New York Times](https://www.nytimes.com/2026/01/23/us/minneapolis-man-pepper-sprayed-pinned-video.html)
