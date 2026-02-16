@@ -1,25 +1,27 @@
 ---
-import 'jump-css';
-import '../styles/reset.css';
-import '../styles/main.css';
-import Nav from '../components/Nav.astro';
+import { ClientRouter } from "astro:transitions";
+import "jump-css";
+import "../styles/reset.css";
+import "../styles/main.css";
+import Nav from "../components/Nav.astro";
 ---
 
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="https://fav.farm/rocket" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>James Spears, V</title>
-  </head>
-  <body>
-    <Nav />
-    <!-- ## Main Content ## -->
-    <div>
-      <main>
-        <slot />
-      </main>
-    </div>
-  </body>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="https://fav.farm/rocket" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <title>James Spears, V</title>
+        <ClientRouter />
+    </head>
+    <body>
+        <Nav />
+        <!-- ## Main Content ## -->
+        <div>
+            <main>
+                <slot />
+            </main>
+        </div>
+    </body>
 </html>
