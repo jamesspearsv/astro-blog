@@ -11,13 +11,30 @@ const { posts } = Astro.props;
 
 <div>
     <p>Category: <span></span></p>
-    <section>
-        {
-            posts.map((post) => (
-                <section>
-                    <PostPreview post={post} />
-                </section>
-            ))
-        }
+    <section id="post-list">
+        {posts.map((post) => <PostPreview post={post} />)}
     </section>
 </div>
+
+<script>
+    function filterPosts() {
+        const postList = document.getElementById("post-list");
+
+        if (!postList) return false;
+
+        // Get all post elements
+        // and filter based on data-tag attribute
+
+        const posts = postList.children;
+        for (const post of posts) {
+            if (post instanceof HTMLElement) {
+                const TAG = "web-dev";
+                const tags = post.dataset.tags!.split(",");
+
+                if (!tags.includes(TAG)) post.style.display = "none";
+            }
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", filterPosts);
+</script>
