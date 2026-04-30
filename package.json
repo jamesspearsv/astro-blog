@@ -9,11 +9,11 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/alpinejs": "^0.4.9",
-    "@astrojs/vue": "^5.1.1",
+    "@astrojs/alpinejs": "^0.5.0",
+    "@astrojs/vue": "^6.0.1",
     "@types/alpinejs": "^3.13.11",
     "alpinejs": "^3.15.0",
-    "astro": "^5.14.4",
+    "astro": "^6.2.1",
     "feather-icons": "^4.29.2",
     "jump-css": "^0.5.0",
     "vue": "^3.5.22"
