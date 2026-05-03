@@ -1,0 +1,35 @@
+---
+import type { GetStaticPaths, GetStaticPathsResult } from "astro";
+import { getCollection } from "astro:content";
+import BlogList from "../../components/BlogList.astro";
+import { getPosts } from "../../utils";
+import MainLayout from "../../layouts/MainLayout.astro";
+
+export const getStaticPaths = (async () => {
+    const posts = await getPosts();
+
+    // Parse tags from post frontmatters
+    const tags: string[] = [];
+    for (const post of posts) {
+        for (const tag of post.data.tags) {
+            if (!tags.includes(tag)) tags.push(tag);
+        }
+    }
+
+    console.log(tags);
+
+    const paths: GetStaticPathsResult = [];
+    for (const tag of tags) {
+        paths.push({ params: { tag } });
+    }
+    return paths;
+}) satisfies GetStaticPaths;
+
+const { tag } = Astro.params;
+---
+
+<MainLayout>
+    <section>
+        <BlogList tag={tag} />
+    </section>
+</MainLayout>

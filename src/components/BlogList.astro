@@ -1,22 +1,26 @@
 ---
 import type { CollectionEntry } from "astro:content";
 import PostPreview from "./PostPreview.astro";
+import { getCollection } from "astro:content";
 
 interface Props {
-    posts: CollectionEntry<"posts">[];
+    // posts: CollectionEntry<"posts">[];
+    tag?: string;
 }
 
-const { posts } = Astro.props;
+// const { posts } = Astro.props;
+const posts = (await getCollection("posts")).filter(
+    (post) => post.data.published,
+);
+
+posts.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
 ---
 
 <div>
-    <p>Category: <span></span></p>
-    <section id="post-list">
-        {posts.map((post) => <PostPreview post={post} />)}
-    </section>
+    {posts.map((post) => <PostPreview post={post} />)}
 </div>
 
-<script>
+<!-- <script>
     function filterPosts() {
         const postList = document.getElementById("post-list");
 
@@ -37,4 +41,4 @@ const { posts } = Astro.props;
     }
 
     document.addEventListener("DOMContentLoaded", filterPosts);
-</script>
+</script> -->
