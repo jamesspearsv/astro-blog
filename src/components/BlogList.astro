@@ -1,44 +1,28 @@
 ---
-import type { CollectionEntry } from 'astro:content';
-import PostPreview from './PostPreview.astro';
+import PostPreview from "./PostPreview.astro";
+import { getAvailableTags, getPosts } from "../utils";
 
 interface Props {
-  posts: CollectionEntry<'posts'>[];
+    // posts: CollectionEntry<"posts">[];
+    tag?: string;
 }
 
-const { posts } = Astro.props;
+const props = Astro.props;
+
+const tags = await getAvailableTags();
+const posts = await getPosts(props.tag);
 ---
 
-<div x-data="tag">
-  <p x-cloak x-show="tag">Category: <span x-text="tag"></span></p>
-  <section>
-    {
-      posts.map((post) => (
-        <section
-          x-data={`{tags: [${post.data.tags.map((t) => `"${t}"`)}]}`}
-          x-show="!tag || tags.includes(tag)"
-          x-cloak
-        >
-          <PostPreview post={post} />
-        </section>
-      ))
-    }
-  </section>
+<div>
+    <div class="tag-list">
+        {tags.map((tag) => <a href={`/tags/${tag}`}>#{tag}</a>)}
+    </div>
+    {posts.map((post) => <PostPreview post={post} />)}
 </div>
-
-<script>
-  import Alpine from 'alpinejs';
-
-  /*
-  Alpine.data -> https://alpinejs.dev/globals/alpine-data
-  Alpine lifecycle events -> https://alpinejs.dev/essentials/lifecycle#alpine-initialization
-  */
-
-  // Parse current search params during alpine:init
-  document.addEventListener('alpine:init', () => {
-    const url = new URL(location.href);
-    Alpine.data('tag', () => ({
-      tag: url.searchParams.get('tag') || '',
-    }));
-  });
-</script>
+<style>
+    .tag-list {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+</style>

@@ -1,18 +1,18 @@
 ---
-import { getCollection } from 'astro:content';
-import MainLayout from '../../layouts/MainLayout.astro';
-import PostContent from '../../components/PostContent.astro';
-import Icon from '../../components/Icon.astro';
+import { getCollection } from "astro:content";
+import MainLayout from "../../layouts/MainLayout.astro";
+import PostContent from "../../components/PostContent.astro";
+import Icon from "../../components/Icon.astro";
 
 // generate paths from existing content entries
 export async function getStaticPaths() {
-  const entries = await getCollection('posts');
-  return entries.map((entry) => {
-    return {
-      params: { slug: entry.id },
-      props: { post: entry },
-    };
-  });
+    const entries = await getCollection("posts");
+    return entries.map((entry) => {
+        return {
+            params: { slug: entry.id },
+            props: { post: entry },
+        };
+    });
 }
 
 const { post } = Astro.props;
@@ -22,74 +22,74 @@ pubDate.setUTCHours(16); // set pubDate time. 16:00 UTC == 12:00 GMT-4
 ---
 
 <MainLayout>
-  <a href="/blog" class="back-link">
-    <span><Icon icon={'arrow-left'} /></span>
-    <span> All Posts </span>
-  </a>
-  <section class="front-matter">
-    <p class="post-date">{post.data.pubDate.toDateString()}</p>
-    <div class="post-tags">
-      {post.data.tags.map((tag) => <a  href={`/blog?tag=${tag}`} "post-tag">{tag}</a>)}
-    </div>
-    <h1>{post.data.title}</h1>
-    <p class="post-excerpt">{post.data.excerpt}</p>
-  </section>
-  <hr class="post-divider" />
-  <PostContent post={post} />
+    <a href="/blog" class="back-link">
+        <span><Icon icon={"arrow-left"} /></span>
+        <span> All Posts </span>
+    </a>
+    <section class="front-matter">
+        <p class="post-date">{post.data.pubDate.toDateString()}</p>
+        <div class="post-tags">
+            {post.data.tags.map((tag) => <a href={`/tags/${tag}`}>{tag}</a>)}
+        </div>
+        <h1>{post.data.title}</h1>
+        <p class="post-excerpt">{post.data.excerpt}</p>
+    </section>
+    <hr class="post-divider" />
+    <PostContent post={post} />
 </MainLayout>
 
 <style>
-  .front-matter {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    gap: 0.375rem;
-  }
+    .front-matter {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        gap: 0.375rem;
+    }
 
-  .back-link {
-    display: flex;
-    align-items: center;
-    gap: 0.25rem;
-    width: fit-content;
-  }
+    .back-link {
+        display: flex;
+        align-items: center;
+        gap: 0.25rem;
+        width: fit-content;
+    }
 
-  .post-date {
-    color: var(--clr-main-600);
-  }
-
-  .post-date,
-  .post-tags {
-    font-size: calc(1rem - 0.125rem);
-  }
-
-  .post-tags {
-    display: flex;
-    gap: 0.25rem;
-  }
-
-  .post-tag {
-    font-size: var(--size-0);
-    background-color: var(--clr-accent-600);
-    color: var(--clr-main-100);
-    border-radius: calc(var(--border-radius) * 1.25);
-    padding: 0.25rem 0.375rem;
-  }
-
-  .post-excerpt {
-    color: var(--clr-main-600);
-  }
-
-  .post-divider {
-    margin-block: 1rem;
-  }
-
-  @media (prefers-color-scheme: dark) {
     .post-date {
-      color: var(--clr-main-500);
+        color: var(--clr-main-600);
+    }
+
+    .post-date,
+    .post-tags {
+        font-size: calc(1rem - 0.125rem);
+    }
+
+    .post-tags {
+        display: flex;
+        gap: 0.25rem;
+    }
+
+    .post-tag {
+        font-size: var(--size-0);
+        background-color: var(--clr-accent-600);
+        color: var(--clr-main-100);
+        border-radius: calc(var(--border-radius) * 1.25);
+        padding: 0.25rem 0.375rem;
     }
 
     .post-excerpt {
-      color: var(--clr-main-500);
+        color: var(--clr-main-600);
     }
-  }
+
+    .post-divider {
+        margin-block: 1rem;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        .post-date {
+            color: var(--clr-main-500);
+        }
+
+        .post-excerpt {
+            color: var(--clr-main-500);
+        }
+    }
 </style>
