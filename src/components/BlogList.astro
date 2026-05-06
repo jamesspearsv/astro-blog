@@ -1,44 +1,28 @@
 ---
-import type { CollectionEntry } from "astro:content";
 import PostPreview from "./PostPreview.astro";
-import { getCollection } from "astro:content";
+import { getAvailableTags, getPosts } from "../utils";
 
 interface Props {
     // posts: CollectionEntry<"posts">[];
     tag?: string;
 }
 
-// const { posts } = Astro.props;
-const posts = (await getCollection("posts")).filter(
-    (post) => post.data.published,
-);
+const props = Astro.props;
 
-posts.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
+const tags = await getAvailableTags();
+const posts = await getPosts(props.tag);
 ---
 
 <div>
+    <div class="tag-list">
+        {tags.map((tag) => <a href={`/tags/${tag}`}>#{tag}</a>)}
+    </div>
     {posts.map((post) => <PostPreview post={post} />)}
 </div>
-
-<!-- <script>
-    function filterPosts() {
-        const postList = document.getElementById("post-list");
-
-        if (!postList) return false;
-
-        // Get all post elements
-        // and filter based on data-tag attribute
-
-        const posts = postList.children;
-        for (const post of posts) {
-            if (post instanceof HTMLElement) {
-                const TAG = "web-dev";
-                const tags = post.dataset.tags!.split(",");
-
-                if (!tags.includes(TAG)) post.style.display = "none";
-            }
-        }
+<style>
+    .tag-list {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
     }
-
-    document.addEventListener("DOMContentLoaded", filterPosts);
-</script> -->
+</style>
