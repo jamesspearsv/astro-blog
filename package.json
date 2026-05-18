@@ -15,6 +15,7 @@
     "astro": "^6.2.1",
     "feather-icons": "^4.29.2",
     "jump-css": "^0.5.0",
+    "s3mini": "^0.9.4",
     "vue": "^3.5.22"
   },
   "devDependencies": {

@@ -26,6 +26,9 @@ importers:
       jump-css:
         specifier: ^0.5.0
         version: 0.5.0
+      s3mini:
+        specifier: ^0.9.4
+        version: 0.9.4
       vue:
         specifier: ^3.5.22
         version: 3.5.22(typescript@5.9.2)
@@ -1238,6 +1241,10 @@ packages:
     resolution: {integrity: sha512-CLEVl+MnPAiKh5pl4dEWSyMTpuflgNQiLGhMv8ezD5W/qP8AKvmYpCOKRRNOh7oRKnauBZ4SyeYkMS+1VSyKwQ==}
     engines: {node: '>=18.0.0', npm: '>=8.0.0'}
     hasBin: true
+
+  s3mini@0.9.4:
+    resolution: {integrity: sha512-lA6p6JY0+lbcz/NJL8O/BKU8q96iA3f+wDO/QCg4QxOooEJwe0fomHZoeDJhs8TDDRTA40OVNY2E9wOQgAoAVw==}
+    engines: {node: '>=20'}
 
   sax@1.6.0:
     resolution: {integrity: sha512-6R3J5M4AcbtLUdZmRv2SygeVaM7IhrLXu9BmnOGmmACak8fiUtOsYNWUS4uK7upbmHIBbLBeFeI//477BKLBzA==}
@@ -3014,6 +3021,8 @@ snapshots:
       '@rollup/rollup-win32-x64-gnu': 4.52.4
       '@rollup/rollup-win32-x64-msvc': 4.52.4
       fsevents: 2.3.3
+
+  s3mini@0.9.4: {}
 
   sax@1.6.0: {}
 
