@@ -27,9 +27,8 @@ const albums = defineCollection({
     base: "./content-collections/portfolio-albums",
   }),
   schema: z.object({
-    src: z.string(),
     images: z.array(z.string()),
   }),
 });
 
-export const collections = { posts };
+export const collections = { posts, albums };
