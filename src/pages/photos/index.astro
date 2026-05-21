@@ -7,26 +7,7 @@ import Lightbox from "../../components/Lightbox.astro";
 const albums = await getCollection("albums");
 ---
 
-<MainLayout>
-    <div class="photo-grid">
-        {
-            albums[0].data.images.map((image) => (
-                <div
-                    class="img-container"
-                    data-src={`https://images.jspears.me/${albums[0].id}/${image}`}
-                >
-                    <Image
-                        src={`https://images.jspears.me/${albums[0].id}/${image}`}
-                        alt={image}
-                        layout={"fixed"}
-                        inferSize
-                    />
-                </div>
-            ))
-        }
-    </div>
-    <Lightbox src="" />
-</MainLayout>
+<MainLayout />
 
 <style>
     .photo-grid {
