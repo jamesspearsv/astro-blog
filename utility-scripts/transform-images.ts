@@ -1,3 +1,7 @@
+/**
+ * Usage: node transform-images.ts [inputDir]
+ */
+
 import sharp from "sharp";
 import * as fs from "fs/promises";
 
