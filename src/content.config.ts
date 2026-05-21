@@ -9,7 +9,7 @@ import { glob } from "astro/loaders";
 const posts = defineCollection({
   loader: glob({
     pattern: "**/*.md",
-    base: "./content-collections/blog-content/posts",
+    base: "./blog-content/posts",
   }),
   schema: z.object({
     published: z.boolean(),
@@ -20,15 +20,4 @@ const posts = defineCollection({
   }),
 });
 
-// define Albums collection
-const albums = defineCollection({
-  loader: glob({
-    pattern: "**/*.json",
-    base: "./content-collections/portfolio-albums",
-  }),
-  schema: z.object({
-    images: z.array(z.string()),
-  }),
-});
-
-export const collections = { posts, albums };
+export const collections = { posts };
