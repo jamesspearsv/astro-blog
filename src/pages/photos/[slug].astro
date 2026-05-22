@@ -1,0 +1,23 @@
+---
+import type { GetStaticPaths, GetStaticPathsResult } from "astro";
+import { getCollection, getEntry } from "astro:content";
+import MainLayout from "../../layouts/MainLayout.astro";
+import { getEntryBySlug } from "astro:content";
+
+export const getStaticPaths = (async () => {
+    const albums = await getCollection("albums");
+    const statcPaths = albums.map((album) => ({
+        params: { slug: album.id },
+    })) satisfies GetStaticPathsResult;
+
+    return statcPaths;
+}) satisfies GetStaticPaths;
+
+const { slug } = Astro.params;
+
+const album = await getEntry("albums", slug);
+---
+
+<MainLayout>
+    <p>{album!.data.name}</p>
+</MainLayout>
