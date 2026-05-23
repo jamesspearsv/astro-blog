@@ -2,6 +2,7 @@
 import type { GetStaticPaths, GetStaticPathsResult } from "astro";
 import { getCollection, getEntry } from "astro:content";
 import MainLayout from "../../layouts/MainLayout.astro";
+import Lightbox from "../../components/Lightbox.astro";
 import { Image } from "astro:assets";
 
 export const getStaticPaths = (async () => {
@@ -14,8 +15,9 @@ export const getStaticPaths = (async () => {
 }) satisfies GetStaticPaths;
 
 const { slug } = Astro.params;
-
 const album = await getEntry("albums", slug);
+
+const imageSize = { width: 200, height: 500 };
 ---
 
 <MainLayout>
@@ -23,23 +25,25 @@ const album = await getEntry("albums", slug);
     <section>
         {
             album?.data.images.map((image) => (
-                <Image
-                    src={`${album.data.src}/${image}`}
-                    width={250}
-                    height={250}
-                    alt={"alt text"}
-                    loading={"eager"}
-                    layout={"constrained"}
-                />
+                <div class="image-container">
+                    <Image
+                        src={`${album.data.src}/${image}`}
+                        height={200}
+                        width={300}
+                        alt={"alt text"}
+                        loading={"eager"}
+                    />
+                </div>
             ))
         }
     </section>
 </MainLayout>
+<Lightbox />
 
 <style>
     section {
-        display: grid;
-        gap: 1rem;
-        grid-template-columns: repeat(3, 1fr);
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
     }
 </style>

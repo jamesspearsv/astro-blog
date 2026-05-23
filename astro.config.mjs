@@ -6,5 +6,6 @@ export default defineConfig({
   integrations: [],
   image: {
     domains: ["images.jspears.me"],
+    layout: "constrained",
   },
 });
