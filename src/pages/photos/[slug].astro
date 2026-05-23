@@ -2,7 +2,7 @@
 import type { GetStaticPaths, GetStaticPathsResult } from "astro";
 import { getCollection, getEntry } from "astro:content";
 import MainLayout from "../../layouts/MainLayout.astro";
-import { getEntryBySlug } from "astro:content";
+import { Image } from "astro:assets";
 
 export const getStaticPaths = (async () => {
     const albums = await getCollection("albums");
@@ -19,5 +19,27 @@ const album = await getEntry("albums", slug);
 ---
 
 <MainLayout>
-    <p>{album!.data.name}</p>
+    <h1>{album!.data.name}</h1>
+    <section>
+        {
+            album?.data.images.map((image) => (
+                <Image
+                    src={`${album.data.src}/${image}`}
+                    width={250}
+                    height={250}
+                    alt={"alt text"}
+                    loading={"eager"}
+                    layout={"constrained"}
+                />
+            ))
+        }
+    </section>
 </MainLayout>
+
+<style>
+    section {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(3, 1fr);
+    }
+</style>
