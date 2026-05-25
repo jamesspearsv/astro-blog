@@ -1,0 +1,21 @@
+---
+import { Image } from 'astro:assets';
+
+interface Props {
+    src: string;
+    size: number;
+    lightbox: boolean | undefined;
+}
+
+const props = Astro.props;
+---
+
+<div class="imageContainer" data-src={props.src}>
+    <Image
+        src={props.src}
+        height={props.size}
+        width={props.size * 1.5}
+        alt={'alt text'}
+        loading={'eager'}
+    />
+</div>
