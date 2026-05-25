@@ -1,0 +1,21 @@
+---
+import ImagePreview from './ImagePreview.astro';
+---
+
+<dialog id="lightboxModal">
+    <article>
+        <img src="" id="lightboxImage" />
+        <button id="lightboxCloseButton" type="reset"></button>
+    </article>
+</dialog>
+
+<style>
+    #lightboxModal > article {
+        background-color: transparent !important;
+    }
+
+    img {
+        width: 90dvw;
+        height: auto;
+    }
+</style>

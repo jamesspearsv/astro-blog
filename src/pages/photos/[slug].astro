@@ -1,0 +1,48 @@
+---
+import type { GetStaticPaths, GetStaticPathsResult } from 'astro';
+import { getCollection, getEntry } from 'astro:content';
+import MainLayout from '../../layouts/MainLayout.astro';
+import Lightbox from '../../components/Lightbox.astro';
+import { Image } from 'astro:assets';
+import ImagePreview from '../../components/ImagePreview.astro';
+
+export const getStaticPaths = (async () => {
+    const albums = await getCollection('albums');
+    const statcPaths = albums.map((album) => ({
+        params: { slug: album.id },
+    })) satisfies GetStaticPathsResult;
+
+    return statcPaths;
+}) satisfies GetStaticPaths;
+
+const { slug } = Astro.params;
+const album = await getEntry('albums', slug);
+
+const imageSize = { width: 200, height: 500 };
+---
+
+<MainLayout>
+    <h1>{album!.data.name}</h1>
+    <section>
+        {
+            album?.data.images.map((image) => (
+                <div class="image-container">
+                    <ImagePreview
+                        src={`${album.data.src}/${image}`}
+                        size={200}
+                    />
+                </div>
+            ))
+        }
+    </section>
+</MainLayout>
+<Lightbox />
+<script src="../../client-scripts/lightbox.ts"></script>
+
+<style>
+    section {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+</style>

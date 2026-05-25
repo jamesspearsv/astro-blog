@@ -1,0 +1,14 @@
+---
+import { getCollection } from "astro:content";
+import MainLayout from "../../layouts/MainLayout.astro";
+
+const albums = await getCollection("albums");
+---
+
+<MainLayout>
+    {
+        albums.map((album) => (
+            <a href={`/photos/${album.id} `}>{album.data.name}</a>
+        ))
+    }
+</MainLayout>
