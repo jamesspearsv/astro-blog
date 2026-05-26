@@ -1,30 +1,19 @@
 ---
-import { getCollection } from "astro:content";
-import { Image } from "astro:assets";
-import MainLayout from "../layouts/MainLayout.astro";
-import PostPreview from "../components/PostPreview.astro";
-import Icon from "../components/Icon.astro";
-import Hero from "../components/Hero.astro";
+import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
+import MainLayout from '../layouts/MainLayout.astro';
+import PostPreview from '../components/PostPreview.astro';
+import Icon from '../components/Icon.astro';
+import Hero from '../components/Hero.astro';
 
-const posts = (await getCollection("posts"))
+const posts = (await getCollection('posts'))
     .sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime())
     .slice(0, 1);
 ---
 
 <MainLayout>
     <hr />
-    <div style="display: flex; gap: 1rem;align-items: center;">
-        <Image
-            src={"https://images.jspears.me/headshot.webp"}
-            alt={"A headshot of James with a cat on his shoulder"}
-            height={200}
-            width={200}
-            layout="constrained"
-            style="border-radius: 20px;"
-            loading={"eager"}
-        />
-        <Hero />
-    </div>
+    <Hero />
     <hr />
     <section>
         <p class="recent-posts-heading">Latest Post</p>
@@ -35,7 +24,7 @@ const posts = (await getCollection("posts"))
     <section>
         <a href="/blog" class="see-more">
             <span>See More</span>
-            <Icon icon={"arrow-right"} />
+            <Icon icon={'arrow-right'} />
         </a>
     </section>
 </MainLayout>
