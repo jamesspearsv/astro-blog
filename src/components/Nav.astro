@@ -1,24 +1,26 @@
 <nav>
-    <ul>
-        <a href="/blog">Blog</a>
-    </ul>
-    <a href="/">
-        <span class="anchor"> James Spears, V</span>
-    </a>
-    <ul>
-        <a href="/about">About</a>
-    </ul>
+    <aside>
+        <a href="/">
+            <span class="anchor"> James Spears, V</span>
+        </a>
+        <ul>
+            <a href="/blog">Blog</a>
+            <a href="/reading">Reading Log</a>
+            <a href="/about">About</a>
+        </ul>
+    </aside>
 </nav>
 
 <style>
     nav {
         padding-inline: 1rem;
         justify-content: center;
+        text-align: center;
     }
 
     ul {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         list-style: none;
         align-items: center;
         gap: var(--spacing-medium);

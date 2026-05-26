@@ -1,17 +1,13 @@
 /* GLOBAL STYLES */
 :root {
-  --content-width: min(60ch, 90%);
-  interpolate-size: allow-keywords;
+    --content-width: min(60ch, 90%);
+    interpolate-size: allow-keywords;
 }
 
 html {
-  font-size: 18px;
+    font-size: 18px;
 }
 
 main {
-  padding: 1.25rem;
-}
-
-[x-cloak] {
-  display: none !important;
+    padding: 1.25rem;
 }

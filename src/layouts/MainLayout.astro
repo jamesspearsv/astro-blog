@@ -1,9 +1,15 @@
 ---
-import { ClientRouter } from "astro:transitions";
-import "jump-css";
-import "../styles/reset.css";
-import "../styles/main.css";
-import Nav from "../components/Nav.astro";
+import { ClientRouter } from 'astro:transitions';
+import 'jump-css';
+import '../styles/reset.css';
+import '../styles/main.css';
+import Nav from '../components/Nav.astro';
+
+// HACK: #12 Find a better method to load styles for markdown only pages
+if (Astro.props.frontmatter) {
+    console.log('importing post styles');
+    import('../styles/post.css');
+}
 ---
 
 <html lang="en">
@@ -13,14 +19,20 @@ import Nav from "../components/Nav.astro";
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
         <title>James Spears, V</title>
-        <!-- <ClientRouter /> -->
+        <ClientRouter />
     </head>
     <body>
         <Nav />
         <!-- ## Main Content ## -->
         <div>
             <main>
-                <slot />
+                {
+                    Astro.props.frontmatter ?
+                        <div class="post-content">
+                            <slot />
+                        </div>
+                    :   <slot />
+                }
             </main>
         </div>
     </body>
