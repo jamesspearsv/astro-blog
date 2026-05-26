@@ -1,9 +1,18 @@
 ---
-
+import { Image } from 'astro:assets';
 ---
 
 <section class="hero-container">
-    <aside>
+    <Image
+        src={'https://images.jspears.me/headshot.webp'}
+        alt={'A headshot of James with a cat on his shoulder'}
+        height={200}
+        width={200}
+        layout="constrained"
+        style="border-radius: 20px;"
+        loading={'eager'}
+    />
+    <div>
         <div class="greeting">
             <p>Hello!</p>
             <p>I'm James!</p>
@@ -14,33 +23,26 @@
             > from West Virginia. Welcome to my corner of the Internet where I share
             my thoughts, opinions, and other general musings!
         </p>
-    </aside>
+    </div>
 </section>
 <style>
     .hero-container {
-        height: 40dvh;
+        padding-block: 3rem;
         overflow-x: hidden;
         align-content: center;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
     }
 
     .greeting {
         font-size: 1.5rem;
         font-weight: bold;
         font-style: italic;
-        /* opacity: 1; */
 
         display: flex;
         align-items: center;
         gap: 0.5rem;
-
-        /* transition: opacity margin-left;
-    transition-duration: 1000ms;
-    transition-timing-function: ease-in-out; */
-
-        /* @starting-style {
-      opacity: 0;
-      transform: translateX(100dvw);
-    } */
     }
 
     .greeting > *:nth-child(2) {
@@ -64,6 +66,12 @@
     @media (prefers-color-scheme: dark) {
         .bio > span {
             color: var(--clr-accent-400);
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .hero-container {
+            flex-direction: column;
         }
     }
 </style>
