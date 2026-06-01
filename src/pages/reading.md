@@ -13,6 +13,8 @@ I log all of my reading on [Goodreads](https://www.goodreads.com/user/show/12095
 
 ## 2026
 
+[[May]](/blog/what-i-read-may-2026/)
+
 1. _Mickey7_ (Mickey7, #1) by Edward Ashton, 288p
 2. _Antimatter Blues_ (Mickey7, #2) by Edward Ashton, 282p
 3. _The Man of Many Fathers_ by Roy Wood Jr., 288p
